@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:background="#FFFFFF"
+tools:context=".ui.MainFragment"
+android:screenOrientation="sensor">
+
+
+    <Button
+        android:id="@+id/search_button"
+        android:layout_width="63dp"
+
+        android:layout_height="73dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="90dp"
+        android:backgroundTint="#E4F1EDED"
+        android:drawableLeft="@android:drawable/ic_menu_search"
+
+        app:layout_constraintBottom_toBottomOf="@id/prompt"
+        app:layout_constraintEnd_toEndOf="@id/prompt" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/outlinedTextField"
+        android:background="@drawable/searchfield"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginStart="69dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="90dp"
+        android:backgroundTint="#E4F1EDED"
+        app:boxBackgroundColor="#E4F1EDED"
+        android:hint="Search game"
+        android:inputType="text"
+        android:textColorHighlight="@color/black"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/prompt"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="#E4F1EDED"
+            android:inputType="text"
+            android:lineSpacingExtra="10sp"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:visibility="visible"
+
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="111dp"
+        android:layout_height="41dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="50dp"
+        android:gravity="top"
+        android:letterSpacing="0.01"
+        android:lineSpacingExtra="0sp"
+        android:text="Games"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        android:translationY="-0.21sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginTop="157dp"
+        android:background="#80D2D2D2"
+
+        tools:layout_editor_absoluteX="-1dp" />
+
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/mRecyclerView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="160dp"
+    android:layout_marginEnd="1dp"
+    tools:listitem="@layout/item_list"
+    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+
+    />
+
+
+
+
+</FrameLayout>
